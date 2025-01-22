@@ -7,7 +7,7 @@ agent any
     stage("hello") {
                 steps {
                     sh 'echo "sai"'
-                    sh 'echo "${configVal['applications']['name'][0]}"'
+                    sh 'echo "${configVal}"'
                   script {
 
                     def configVal = readYaml file: "test.yaml"
@@ -16,6 +16,7 @@ agent any
                     echo "name: " + name
                     
                   }
+                  sh 'echo "${name}"'
             }
 
 
