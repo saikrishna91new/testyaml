@@ -7,6 +7,7 @@ agent any
     stage("hello") {
                 steps {
                     sh 'echo "sai"'
+                    sh 'echo "${DEPLOY_TO}"'
                   script {
 
                     def configVal = readYaml file: "test.yaml"
