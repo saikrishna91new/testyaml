@@ -8,6 +8,9 @@ agent any
                     def name = "${params.NAME}"
                     def gender = "${params.GENDER}"
                     def configVal = readYaml file: "test.yaml"
+                    echo "configVal: " + configVal
+                    def name = configVal['applications']['name'][0]
+                    echo "name: " + name
                     
                   }
             }
