@@ -7,7 +7,7 @@ agent any
                   script {
                     def name = "${params.NAME}"
                     def gender = "${params.GENDER}"
-                    def configVal = readYaml file: "test.yml"
+                    def configVal = readYaml file: "test.yaml"
                     
                   }
             }
