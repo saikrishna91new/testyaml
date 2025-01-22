@@ -1,5 +1,8 @@
 pipeline {
 agent any
+  environment { 
+        def configVal = readYaml file: "test.yaml"
+    }
   stages {
     stage("hello") {
                 steps {
